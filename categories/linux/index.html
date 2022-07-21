@@ -13,7 +13,7 @@
 <link rel=icon href=/favicon.png type=image/x-icon>
 <link rel=stylesheet href=/book.min.82c5dbd23447cee0b4c2aa3ed08ce0961faa40e1fa370eee4f8c9f02e0d46b5f.css integrity="sha256-gsXb0jRHzuC0wqo+0Izglh+qQOH6Nw7uT4yfAuDUa18=" crossorigin=anonymous>
 <script defer src=/flexsearch.min.js></script>
-<script defer src=/en.search.min.a85a775840794a442c88c06e15a5ca7d01f19543dc56f24ab2ca4b9051c5df06.js integrity="sha256-qFp3WEB5SkQsiMBuFaXKfQHxlUPcVvJKsspLkFHF3wY=" crossorigin=anonymous></script>
+<script defer src=/en.search.min.38be0fa0a62df89ae75f0fa7500081952ad54b6b1db544bb350ee5a6a662066c.js integrity="sha256-OL4PoKYt+JrnXw+nUACBlSrVS2sdtUS7NQ7lpqZiBmw=" crossorigin=anonymous></script>
 <link rel=alternate type=application/rss+xml href=https://wolanx.com/categories/linux/index.xml title=wolanx>
 </head>
 <body dir=ltr>
@@ -161,7 +161,7 @@ Project
 <div>
 <a href=/categories/linux/>linux</a>
 </div>
-<p>sh # Shell 教程 http://www.runoob.com/linux/linux-shell.html 分享70个经典的 Shell 脚本面试题与答案 https://www.jb51.net/article/135168.htm tsdb => csv => sql => influx => oss # # cd /z/wolanx/GiMC/src/backend/temp/mig # chcp.com 65001 # sh ./db2csv.sh # nohup bash all.sh > ~/1.log 2>&1 & set -e tt="20201231" tz="20200101" while [[ "${tt}" -ge "${tz}" ]]; do #tt="20220502" echo "start ${tt}" python3 db2csv.py $tt python2 /root/datax-wolanx/bin/datax.py /root/datax-wolanx/mig/${tt}.json > /dev/null rm ${tt}.json cat /z/data/${tt}__* > /z/data/${tt}.csv cat /z/data/${tt}.csv | wc -l rm /z/data/${tt}__* echo -e "# DML\n# CONTEXT-DATABASE: gimc-hk" > /z/data/${tt}.
+<p>sh # Shell 教程 http://www.runoob.com/linux/linux-shell.html 分享70个经典的 Shell 脚本面试题与答案 https://www.jb51.net/article/135168.htm 6条shell小技巧，让脚本显得不再业余 https://mp.weixin.qq.com/s/ixVK4ockNE46bTdmarsDHQ 常用小技巧 # #!/bin/bash set -o nounset # 变量必须存在 set -o errexit # set -e # bash -n xxx # 检查语法 set -o verbose # bash -v xxx set -o xtrace # bash -x xxx ## 函数封装 log () { local prefix="[$(date +%Y/%m/%d\ %H:%M:%S)]:" echo "${prefix}$@" >&2 } log "INFO" "a message" ## 函数封装 ExactBashComments() { egrep "^#" } cat /etc/hosts | ExactBashComments | wc comments=$(ExactBashComments &lt; /etc/hosts) ## 只读 默认值 readonly DEFAULT_VAL=${DEFAULT_VAL:--99} echo $DEFAULT_VAL # -99 ## if if [[ 100 > "${DEFAULT_VAL}" ]]; then echo 222 fi tsdb => csv => sql => influx => oss # # cd /z/wolanx/GiMC/src/backend/temp/mig # chcp.
 <a href=/posts/linux/shell/>...</a>
 </p>
 </article>

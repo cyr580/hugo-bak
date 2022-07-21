@@ -2,10 +2,10 @@
 <head>
 <meta charset=utf-8>
 <meta name=viewport content="width=device-width,initial-scale=1">
-<meta name=description content="sh #  Shell 教程 http://www.runoob.com/linux/linux-shell.html 分享70个经典的 Shell 脚本面试题与答案 https://www.jb51.net/article/135168.htm tsdb => csv => sql => influx => oss #  # cd /z/wolanx/GiMC/src/backend/temp/mig # chcp.com 65001 # sh ./db2csv.sh # nohup bash all.sh > ~/1.log 2>&1 & set -e tt=&#34;20201231&#34; tz=&#34;20200101&#34; while [[ &#34;${tt}&#34; -ge &#34;${tz}&#34; ]]; do #tt=&#34;20220502&#34; echo &#34;start ${tt}&#34; python3 db2csv.py $tt python2 /root/datax-wolanx/bin/datax.py /root/datax-wolanx/mig/${tt}.json > /dev/null rm ${tt}.json cat /z/data/${tt}__* > /z/data/${tt}.csv cat /z/data/${tt}.csv | wc -l rm /z/data/${tt}__* echo -e &#34;# DML\n# CONTEXT-DATABASE: gimc-hk&#34; > /z/data/${tt}.">
+<meta name=description content="sh #   Shell 教程 http://www.runoob.com/linux/linux-shell.html  分享70个经典的 Shell 脚本面试题与答案 https://www.jb51.net/article/135168.htm  6条shell小技巧，让脚本显得不再业余 https://mp.weixin.qq.com/s/ixVK4ockNE46bTdmarsDHQ   常用小技巧 #  #!/bin/bash set -o nounset # 变量必须存在 set -o errexit # set -e # bash -n xxx # 检查语法 set -o verbose # bash -v xxx set -o xtrace # bash -x xxx ## 函数封装 log () { local prefix=&#34;[$(date +%Y/%m/%d\ %H:%M:%S)]:&#34; echo &#34;${prefix}$@&#34; >&2 } log &#34;INFO&#34; &#34;a message&#34; ## 函数封装 ExactBashComments() { egrep &#34;^#&#34; } cat /etc/hosts | ExactBashComments | wc comments=$(ExactBashComments < /etc/hosts) ## 只读 默认值 readonly DEFAULT_VAL=${DEFAULT_VAL:--99} echo $DEFAULT_VAL # -99 ## if if [[ 100 > &#34;${DEFAULT_VAL}&#34; ]]; then echo 222 fi tsdb => csv => sql => influx => oss #  # cd /z/wolanx/GiMC/src/backend/temp/mig # chcp.">
 <meta name=theme-color content="#FFFFFF">
 <meta name=color-scheme content="light dark"><meta property="og:title" content="shell 脚本">
-<meta property="og:description" content="sh #  Shell 教程 http://www.runoob.com/linux/linux-shell.html 分享70个经典的 Shell 脚本面试题与答案 https://www.jb51.net/article/135168.htm tsdb => csv => sql => influx => oss #  # cd /z/wolanx/GiMC/src/backend/temp/mig # chcp.com 65001 # sh ./db2csv.sh # nohup bash all.sh > ~/1.log 2>&1 & set -e tt=&#34;20201231&#34; tz=&#34;20200101&#34; while [[ &#34;${tt}&#34; -ge &#34;${tz}&#34; ]]; do #tt=&#34;20220502&#34; echo &#34;start ${tt}&#34; python3 db2csv.py $tt python2 /root/datax-wolanx/bin/datax.py /root/datax-wolanx/mig/${tt}.json > /dev/null rm ${tt}.json cat /z/data/${tt}__* > /z/data/${tt}.csv cat /z/data/${tt}.csv | wc -l rm /z/data/${tt}__* echo -e &#34;# DML\n# CONTEXT-DATABASE: gimc-hk&#34; > /z/data/${tt}.">
+<meta property="og:description" content="sh #   Shell 教程 http://www.runoob.com/linux/linux-shell.html  分享70个经典的 Shell 脚本面试题与答案 https://www.jb51.net/article/135168.htm  6条shell小技巧，让脚本显得不再业余 https://mp.weixin.qq.com/s/ixVK4ockNE46bTdmarsDHQ   常用小技巧 #  #!/bin/bash set -o nounset # 变量必须存在 set -o errexit # set -e # bash -n xxx # 检查语法 set -o verbose # bash -v xxx set -o xtrace # bash -x xxx ## 函数封装 log () { local prefix=&#34;[$(date +%Y/%m/%d\ %H:%M:%S)]:&#34; echo &#34;${prefix}$@&#34; >&2 } log &#34;INFO&#34; &#34;a message&#34; ## 函数封装 ExactBashComments() { egrep &#34;^#&#34; } cat /etc/hosts | ExactBashComments | wc comments=$(ExactBashComments < /etc/hosts) ## 只读 默认值 readonly DEFAULT_VAL=${DEFAULT_VAL:--99} echo $DEFAULT_VAL # -99 ## if if [[ 100 > &#34;${DEFAULT_VAL}&#34; ]]; then echo 222 fi tsdb => csv => sql => influx => oss #  # cd /z/wolanx/GiMC/src/backend/temp/mig # chcp.">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://wolanx.com/posts/linux/shell/"><meta property="article:section" content="posts">
 <meta property="article:published_time" content="2017-12-13T00:00:00+00:00">
@@ -15,7 +15,7 @@
 <link rel=icon href=/favicon.png type=image/x-icon>
 <link rel=stylesheet href=/book.min.82c5dbd23447cee0b4c2aa3ed08ce0961faa40e1fa370eee4f8c9f02e0d46b5f.css integrity="sha256-gsXb0jRHzuC0wqo+0Izglh+qQOH6Nw7uT4yfAuDUa18=" crossorigin=anonymous>
 <script defer src=/flexsearch.min.js></script>
-<script defer src=/en.search.min.a85a775840794a442c88c06e15a5ca7d01f19543dc56f24ab2ca4b9051c5df06.js integrity="sha256-qFp3WEB5SkQsiMBuFaXKfQHxlUPcVvJKsspLkFHF3wY=" crossorigin=anonymous></script>
+<script defer src=/en.search.min.38be0fa0a62df89ae75f0fa7500081952ad54b6b1db544bb350ee5a6a662066c.js integrity="sha256-OL4PoKYt+JrnXw+nUACBlSrVS2sdtUS7NQ7lpqZiBmw=" crossorigin=anonymous></script>
 </head>
 <body dir=ltr>
 <input type=checkbox class="hidden toggle" id=menu-control>
@@ -64,6 +64,7 @@ Project
 <nav id=TableOfContents>
 <ul>
 <li><a href=#sh>sh</a></li>
+<li><a href=#常用小技巧>常用小技巧</a></li>
 <li><a href=#tsdb--csv--sql--influx--oss>tsdb => csv => sql => influx => oss</a>
 <ul>
 <li><a href=#上传文件批量>上传文件批量</a></li>
@@ -88,10 +89,49 @@ Project
 sh
 <a class=anchor href=#sh>#</a>
 </h2>
-<p>Shell 教程 <a href=http://www.runoob.com/linux/linux-shell.html target=_blank>http://www.runoob.com/linux/linux-shell.html</a>
-分享70个经典的 Shell 脚本面试题与答案 <a href=https://www.jb51.net/article/135168.htm target=_blank>https://www.jb51.net/article/135168.htm</a>
-</p>
-<h2 id=tsdb--csv--sql--influx--oss>
+<ul>
+<li>Shell 教程 <a href=http://www.runoob.com/linux/linux-shell.html target=_blank>http://www.runoob.com/linux/linux-shell.html</a>
+</li>
+<li>分享70个经典的 Shell 脚本面试题与答案 <a href=https://www.jb51.net/article/135168.htm target=_blank>https://www.jb51.net/article/135168.htm</a>
+</li>
+<li>6条shell小技巧，让脚本显得不再业余 <a href=https://mp.weixin.qq.com/s/ixVK4ockNE46bTdmarsDHQ target=_blank>https://mp.weixin.qq.com/s/ixVK4ockNE46bTdmarsDHQ</a>
+</li>
+</ul>
+<h2 id=常用小技巧>
+常用小技巧
+<a class=anchor href=#%e5%b8%b8%e7%94%a8%e5%b0%8f%e6%8a%80%e5%b7%a7>#</a>
+</h2>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-shell data-lang=shell><span style=color:#75715e>#!/bin/bash
+</span><span style=color:#75715e></span>set -o nounset <span style=color:#75715e># 变量必须存在</span>
+set -o errexit <span style=color:#75715e># set -e</span>
+
+<span style=color:#75715e># bash -n xxx # 检查语法</span>
+set -o verbose <span style=color:#75715e># bash -v xxx</span>
+set -o xtrace <span style=color:#75715e># bash -x xxx</span>
+
+<span style=color:#75715e>## 函数封装</span>
+log <span style=color:#f92672>()</span> <span style=color:#f92672>{</span>
+  local prefix<span style=color:#f92672>=</span><span style=color:#e6db74>&#34;[</span><span style=color:#66d9ef>$(</span>date +%Y/%m/%d<span style=color:#ae81ff>\ </span>%H:%M:%S<span style=color:#66d9ef>)</span><span style=color:#e6db74>]:&#34;</span>
+  echo <span style=color:#e6db74>&#34;</span><span style=color:#e6db74>${</span>prefix<span style=color:#e6db74>}</span><span style=color:#e6db74> </span>$@<span style=color:#e6db74>&#34;</span> &gt;&amp;<span style=color:#ae81ff>2</span>
+<span style=color:#f92672>}</span>
+log <span style=color:#e6db74>&#34;INFO&#34;</span> <span style=color:#e6db74>&#34;a message&#34;</span>
+
+<span style=color:#75715e>## 函数封装</span>
+ExactBashComments<span style=color:#f92672>()</span> <span style=color:#f92672>{</span>
+  egrep <span style=color:#e6db74>&#34;^#&#34;</span>
+<span style=color:#f92672>}</span>
+cat /etc/hosts | ExactBashComments | wc
+comments<span style=color:#f92672>=</span><span style=color:#66d9ef>$(</span>ExactBashComments &lt; /etc/hosts<span style=color:#66d9ef>)</span>
+
+<span style=color:#75715e>## 只读 默认值</span>
+readonly DEFAULT_VAL<span style=color:#f92672>=</span><span style=color:#e6db74>${</span>DEFAULT_VAL<span style=color:#66d9ef>:-</span>-99<span style=color:#e6db74>}</span>
+echo $DEFAULT_VAL <span style=color:#75715e># -99</span>
+
+<span style=color:#75715e>## if</span>
+<span style=color:#66d9ef>if</span> <span style=color:#f92672>[[</span> <span style=color:#ae81ff>100</span> &gt; <span style=color:#e6db74>&#34;</span><span style=color:#e6db74>${</span>DEFAULT_VAL<span style=color:#e6db74>}</span><span style=color:#e6db74>&#34;</span> <span style=color:#f92672>]]</span>; <span style=color:#66d9ef>then</span>
+    echo <span style=color:#ae81ff>222</span>
+<span style=color:#66d9ef>fi</span>
+</code></pre></div><h2 id=tsdb--csv--sql--influx--oss>
 tsdb => csv => sql => influx => oss
 <a class=anchor href=#tsdb--csv--sql--influx--oss>#</a>
 </h2>
@@ -230,6 +270,7 @@ ssh www@172.16.45.87 '#!/bin/sh
 <nav id=TableOfContents>
 <ul>
 <li><a href=#sh>sh</a></li>
+<li><a href=#常用小技巧>常用小技巧</a></li>
 <li><a href=#tsdb--csv--sql--influx--oss>tsdb => csv => sql => influx => oss</a>
 <ul>
 <li><a href=#上传文件批量>上传文件批量</a></li>
