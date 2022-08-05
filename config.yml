@@ -1,7 +1,7 @@
-baseURL: https://wolanx.com/
+baseURL: https://cyr580.github.io/
 languageCode: en-us
-title: wolanx
-theme: hugo-book
+title: iLDesign
+theme: HugoMDL
 
 menu:
   # before: []
@@ -14,5 +14,5 @@ params:
   # https://github.com/alex-shpak/hugo-book/blob/master/exampleSite/config.yaml
   BookDateFormat: "2006-01-02 15:04:05"
 
-  BookRepo: https://github.com/wolanx/blog
+  BookRepo: https://github.com/cyr580/cyr580.github.io
   BookEditPath: edit/main
